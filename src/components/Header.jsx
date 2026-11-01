@@ -10,11 +10,13 @@ export default function Header({ theme }) {
       </Link>
       <div>
         <nav>
-          {links.map((link) => (
-            <Link key={link.to} to={link.to}>
-              {link.label}
-            </Link>
-          ))}
+          <ul>
+            {links.map((li) => (
+              <Link key={li.to} to={li.to}>
+                {li.label}
+              </Link>
+            ))}
+          </ul>
         </nav>
         {cta && (
           <Link to={cta.to} className="btn btn-agendamento">

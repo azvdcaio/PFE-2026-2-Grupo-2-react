@@ -1,7 +1,7 @@
 import Header from "./Header";
 import Footer from "./Footer";
 
-export default function Layout({ theme = "hub", children }) {
+export default function Layout({ theme, children }) {
   return (
     <div data-theme={theme}>
       <Header theme={theme} />

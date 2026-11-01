@@ -9,7 +9,9 @@ export default function Hub() {
         titulo="CT de Performance Integrado"
         texto={
           <>
-            A Holding integra duas empresas do segmento esportivo... <br />
+            A Holding integra duas empresas do segmento esportivo, voltada para
+            treinamento de alto desempenho, desenvolvimento humano e saúde.
+            <br />
             Tudo para potencializar pessoas e atletas em cada fase da sua
             jornada.
           </>
