@@ -13,13 +13,40 @@
   --cor-azul-900: #00112b;
   --cor-cinza-100: #fbfbfb;
 
-  --cor-agendamento: var(--cor-azul-700);
-
   --gutter: 16px;
   --margem: max(var(--gutter), calc((100% - 1100px) / 2));
 
   /* Altura do header sticky no mobile (12 + 44 + 12). Usada pelo hero em tela cheia */
   --altura-header: 68px;
+}
+
+/* ============ TEMAS (definidos via data-theme no Layout) ============ */
+:root,
+[data-theme="hub"] {
+  --cor-tema: var(--cor-azul-900);
+  --cor-agendamento: var(--cor-azul-700);
+  --cor-linha-footer: var(--cor-azul-800);
+  --cor-rede-borda: var(--cor-cinza-100);
+  --cor-rede-icone: var(--cor-azul-100);
+  --sombra-header: none;
+}
+
+[data-theme="pkz-lab"] {
+  --cor-tema: var(--cor-azul-700);
+  --cor-agendamento: var(--cor-azul-700);
+  --cor-linha-footer: var(--cor-azul-100);
+  --cor-rede-borda: var(--cor-azul-100);
+  --cor-rede-icone: var(--cor-azul-500);
+  --sombra-header: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="one-to-one"] {
+  --cor-tema: var(--cor-azul-800);
+  --cor-agendamento: var(--cor-azul-800);
+  --cor-linha-footer: var(--cor-azul-100);
+  --cor-rede-borda: var(--cor-azul-100);
+  --cor-rede-icone: var(--cor-azul-500);
+  --sombra-header: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
 html {
@@ -87,7 +114,8 @@ a {
 }
 
 header {
-  background-color: var(--cor-cinza-100);
+  background-color: var(--cor-tema);
+  box-shadow: var(--sombra-header);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -106,8 +134,8 @@ header ul {
 }
 
 /* sem JS o menu ocupa a linha de baixo */
-body > header > nav,
-body > header > .header__acoes {
+header > nav,
+header > .header__acoes {
   flex-basis: 100%;
 }
 
@@ -127,7 +155,7 @@ header a {
   gap: 24px;
   padding-top: 36px;
   padding-bottom: 24px;
-  background: var(--cor-azul-900);
+  background: var(--cor-tema);
   color: var(--cor-azul-100);
   font-size: 0.8rem;
 }
@@ -175,9 +203,9 @@ header a {
   justify-content: center;
   width: 44px;
   height: 44px;
-  border: 1px solid var(--cor-cinza-100);
+  border: 1px solid var(--cor-rede-borda);
   border-radius: 8px;
-  color: var(--cor-azul-100);
+  color: var(--cor-rede-icone);
   transition: all 0.3s ease-in-out;
 }
 
@@ -189,7 +217,7 @@ header a {
 .footer__linha {
   width: 100%;
   border: 0;
-  border-top: 1px solid var(--cor-azul-800);
+  border-top: 1px solid var(--cor-linha-footer);
 }
 
 .footer__copy,
@@ -314,7 +342,7 @@ button.btn {
 .header__hub {
   padding-top: 12px;
   padding-bottom: 12px;
-  background: var(--cor-azul-900);
+  background: var(--cor-tema);
   color: var(--cor-cinza-100);
 }
 
@@ -724,8 +752,8 @@ button.btn {
     display: none;
   }
 
-  body > header > nav,
-  body > header > .header__acoes {
+  header > nav,
+  header > .header__acoes {
     flex-basis: auto;
   }
 
@@ -982,16 +1010,11 @@ body:has(dialog.modal[open]) {
 /*===============================================
 PKZ Lab 
 ================================================*/
-.pkz-corpo header {
-  background-color: var(--cor-azul-700);
-}
-
 .pkz-hero {
   padding: 48px var(--margem);
-  background-image: url(assets/pkz_hero_banner.jpg);
   background-image:
     linear-gradient(rgba(0, 17, 43, 0.7), rgba(0, 17, 43, 0.7)),
-    url(assets/pkz_hero_banner.jpg);
+    url("./assets/pkz_hero_banner.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1337,10 +1360,6 @@ PKZ Lab
   height: 300px;
   border-radius: 8px;
   border: none;
-}
-
-#footer-pkz {
-  background-color: var(--cor-azul-700);
 }
 
 /* 601px — 767px: phablets e tablets pequenos */
@@ -1799,7 +1818,7 @@ One To One
 }
 
 /* na PKZ a margem de baixo da localização já separa as seções */
-.pkz-corpo .faq {
+[data-theme="pkz-lab"] .faq {
   padding-top: 0;
 }
 
@@ -1810,11 +1829,11 @@ One To One
   text-align: center;
 }
 
-.pkz-corpo .faq h2 {
+[data-theme="pkz-lab"] .faq h2 {
   color: var(--cor-azul-800);
 }
 
-.pagina-one .faq h2 {
+[data-theme="one-to-one"] .faq h2 {
   color: var(--cor-azul-900);
 }
 
@@ -1989,133 +2008,133 @@ One To One
   }
 }
 
-.pagina-one .header__hub {
+[data-theme="one-to-one"] .header__hub {
   gap: 8px 24px;
 }
 
-.pagina-one .menu {
+[data-theme="one-to-one"] .menu {
   flex-wrap: wrap;
   justify-content: center;
   gap: 8px 16px;
 }
 
-.pagina-one .hero {
+[data-theme="one-to-one"] .hero {
   min-height: 520px;
   padding: 48px 24px;
 }
 
-.pagina-one .hero__conteudo {
+[data-theme="one-to-one"] .hero__conteudo {
   gap: 20px;
 }
 
-.pagina-one .hero h1 {
+[data-theme="one-to-one"] .hero h1 {
   max-width: 14ch;
   font-size: 2rem;
 }
 
-.pagina-one .hero__wordmark {
+[data-theme="one-to-one"] .hero__wordmark {
   display: none;
 }
 
-.pagina-one .secao {
+[data-theme="one-to-one"] .secao {
   padding-block: 48px;
 }
 
-.pagina-one .secao__cabecalho {
+[data-theme="one-to-one"] .secao__cabecalho {
   margin-bottom: 32px;
 }
 
-.pagina-one .secao h2 {
+[data-theme="one-to-one"] .secao h2 {
   font-size: 1.5rem;
 }
 
-.pagina-one .equipe__lista {
+[data-theme="one-to-one"] .equipe__lista {
   grid-template-columns: 1fr;
 }
 
-.pagina-one .footer__marca {
+[data-theme="one-to-one"] .footer__marca {
   width: 100%;
 }
 
-.pagina-one .btn-rede {
+[data-theme="one-to-one"] .btn-rede {
   width: 44px;
   height: 44px;
 }
 
 @media (min-width: 601px) {
-  .pagina-one .hero h1 {
+  [data-theme="one-to-one"] .hero h1 {
     font-size: 2.5rem;
   }
 
-  .pagina-one .caracteristicas .membro img {
+  [data-theme="one-to-one"] .caracteristicas .membro img {
     aspect-ratio: 16 / 10;
   }
 }
 
 @media (min-width: 768px) {
-  .pagina-one .menu {
+  [data-theme="one-to-one"] .menu {
     flex-wrap: nowrap;
     gap: 28px;
   }
 
-  .pagina-one .hero {
+  [data-theme="one-to-one"] .hero {
     min-height: 600px;
   }
 
-  .pagina-one .hero h1 {
+  [data-theme="one-to-one"] .hero h1 {
     max-width: 11ch;
     font-size: 3rem;
   }
 
-  .pagina-one .hero__wordmark {
+  [data-theme="one-to-one"] .hero__wordmark {
     display: block;
     font-size: 5rem;
   }
 
-  .pagina-one .secao {
+  [data-theme="one-to-one"] .secao {
     padding-block: 64px;
   }
 
-  .pagina-one .secao__cabecalho {
+  [data-theme="one-to-one"] .secao__cabecalho {
     margin-bottom: 48px;
   }
 
-  .pagina-one .secao h2 {
+  [data-theme="one-to-one"] .secao h2 {
     font-size: 1.75rem;
   }
 
-  .pagina-one .equipe__lista {
+  [data-theme="one-to-one"] .equipe__lista {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .pagina-one .caracteristicas .membro img {
+  [data-theme="one-to-one"] .caracteristicas .membro img {
     aspect-ratio: 4 / 5;
   }
 
-  .pagina-one .footer__marca {
+  [data-theme="one-to-one"] .footer__marca {
     width: 260px;
   }
 }
 
 @media (min-width: 1025px) {
-  .pagina-one .hero {
+  [data-theme="one-to-one"] .hero {
     min-height: 680px;
     padding-block: 64px;
   }
 
-  .pagina-one .hero__conteudo {
+  [data-theme="one-to-one"] .hero__conteudo {
     gap: 24px;
   }
 
-  .pagina-one .hero h1 {
+  [data-theme="one-to-one"] .hero h1 {
     font-size: 3.5rem;
   }
 
-  .pagina-one .hero__wordmark {
+  [data-theme="one-to-one"] .hero__wordmark {
     font-size: 9rem;
   }
 
-  .pagina-one .btn-rede {
+  [data-theme="one-to-one"] .btn-rede {
     width: 32px;
     height: 32px;
   }
@@ -2125,36 +2144,36 @@ One To One
 
 /* Contato One To One */
 
-.pagina-one .contato.agendamento {
+[data-theme="one-to-one"] .contato.agendamento {
   align-items: start;
 }
 
-.pagina-one .contato h2 {
+[data-theme="one-to-one"] .contato h2 {
   margin-bottom: 16px;
   font-size: 1rem;
   letter-spacing: 0.08em;
   color: var(--cor-agendamento);
 }
 
-.pagina-one .contato__info {
+[data-theme="one-to-one"] .contato__info {
   font-style: normal;
 }
 
-.pagina-one .contato__lista .passos__numero {
+[data-theme="one-to-one"] .contato__lista .passos__numero {
   background: var(--cor-agendamento);
 }
 
-.pagina-one .contato__lista a:hover {
+[data-theme="one-to-one"] .contato__lista a:hover {
   text-decoration: underline;
 }
 
-.pagina-one .contato__redes {
+[data-theme="one-to-one"] .contato__redes {
   display: flex;
   gap: 12px;
   margin-top: 28px;
 }
 
-.pagina-one .contato__redes .btn-rede {
+[data-theme="one-to-one"] .contato__redes .btn-rede {
   width: 44px;
   height: 44px;
   border-color: #cfcbbd;
@@ -2164,13 +2183,13 @@ One To One
   font-size: 1.1rem;
 }
 
-.pagina-one .contato__redes .btn-rede:hover {
+[data-theme="one-to-one"] .contato__redes .btn-rede:hover {
   border-color: var(--cor-agendamento);
   background: var(--cor-agendamento);
   color: #fff;
 }
 
-.pagina-one .contato .form-agendamento {
+[data-theme="one-to-one"] .contato .form-agendamento {
   padding: 16px;
   border: 1px solid #e3e0d8;
   border-radius: 20px;
@@ -2179,52 +2198,9 @@ One To One
 
 /* 601px — 767px: phablets e tablets pequenos */
 @media (min-width: 601px) {
-  .pagina-one .contato .form-agendamento {
+  [data-theme="one-to-one"] .contato .form-agendamento {
     padding: 24px;
   }
-}
-
-/* Agendamento PKZ */
-
-.pagina-pkz .header__hub {
-  background: var(--cor-azul-700);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
-}
-
-.pagina-pkz .footer {
-  background: var(--cor-azul-700);
-}
-
-.pagina-pkz .footer__linha {
-  border-top-color: var(--cor-azul-100);
-}
-
-.pagina-pkz .btn-rede {
-  border-color: var(--cor-azul-100);
-  color: var(--cor-azul-500);
-}
-
-/* Agendamento One To One */
-.pagina-one {
-  --cor-agendamento: var(--cor-azul-800);
-}
-
-.pagina-one .header__hub {
-  background: var(--cor-azul-800);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
-}
-
-.pagina-one .footer {
-  background: var(--cor-azul-800);
-}
-
-.pagina-one .footer__linha {
-  border-top-color: var(--cor-azul-100);
-}
-
-.pagina-one .btn-rede {
-  border-color: var(--cor-azul-100);
-  color: var(--cor-azul-500);
 }
 
 .header__acoes {
@@ -2933,7 +2909,7 @@ textarea.form-agendamento__input {
    ========================================================== */
 @media (max-width: 767px) {
   .hero,
-  .pagina-one .hero,
+  [data-theme="one-to-one"] .hero,
   .pkz-hero {
     min-height: calc(100vh - var(--altura-header));
     min-height: calc(100svh - var(--altura-header));
