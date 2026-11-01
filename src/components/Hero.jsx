@@ -43,9 +43,6 @@ function Hero({
         {eyebrow && <p className="hero__eyebrow">{eyebrow}</p>}
         <h1 id={tituloId}>{titulo}</h1>
         {texto && <p className="hero__texto">{texto}</p>}
-
-        {/* Com 2 botões usa a grade .hero__acoes (lado a lado no desktop).
-            Com 1 botão ele fica solto, com largura natural, como no HTML original. */}
         {acoes.length > 1 ? (
           <div className="hero__acoes">{botoes}</div>
         ) : (
