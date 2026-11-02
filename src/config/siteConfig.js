@@ -4,8 +4,8 @@ export const siteConfig = {
   hub: {
     logo: "",
     links: [
-      { to: "/inicio", label: "Inicio" },
-      { to: "/pkz-lab", label: "PKZ Lab" },
+      { to: "/", label: "Inicio" },
+      { to: "/pkz", label: "PKZ Lab" },
       { to: "/one-to-one", label: "One To One" },
     ],
     cta: null,
@@ -13,8 +13,8 @@ export const siteConfig = {
   "pkz-lab": {
     logo: "",
     links: [
-      { to: "/inicio", label: "Inicio" },
-      { to: "/pkz-lab", label: "PKZ Lab" },
+      { to: "/", label: "Inicio" },
+      { to: "/pkz", label: "PKZ Lab" },
       { to: "/one-to-one", label: "One To One" },
       { to: "/pkz-lab/contato", label: "Contato" },
     ],
@@ -23,8 +23,8 @@ export const siteConfig = {
   "one-to-one": {
     logo: "",
     links: [
-      { to: "/inicio", label: "Inicio" },
-      { to: "/pkz-lab", label: "PKZ Lab" },
+      { to: "/", label: "Inicio" },
+      { to: "/pkz", label: "PKZ Lab" },
       { to: "/one-to-one", label: "One To One" },
       { to: "/one-to-one/contato", label: "Contato" },
     ],

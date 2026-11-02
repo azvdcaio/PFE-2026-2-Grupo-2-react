@@ -1051,7 +1051,7 @@ PKZ Lab
   color: var(--cor-azul-100);
   font-weight: 600;
   opacity: 0.9;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 
 /*PKZ - QUEM SOMOS NÓS*/
