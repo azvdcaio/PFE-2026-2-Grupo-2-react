@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 160" role="img" aria-label="Fisioterapia">
+  <g fill="#fbfbfb">
+    <circle cx="64" cy="80" r="46" fill="none" stroke="#fbfbfb" stroke-width="10"/>
+    <path d="M64 50v60M34 80h60" stroke="#fbfbfb" stroke-width="12" stroke-linecap="round"/>
+    <text x="132" y="96" font-family="'Work Sans', Arial, Helvetica, sans-serif" font-weight="800" font-size="72" letter-spacing="2">FISIO</text>
+    <text x="134" y="136" font-family="'Work Sans', Arial, Helvetica, sans-serif" font-weight="400" font-size="26" letter-spacing="14">TERAPIA</text>
+  </g>
+</svg>
