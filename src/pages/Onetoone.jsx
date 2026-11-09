@@ -4,6 +4,9 @@ import ImagemResponsiva from "../components/ImagemResponsiva";
 import Secao from "../components/Secao";
 import Card from "../components/Card";
 import Carrossel from "../components/Carrossel";
+import { Link } from "react-router-dom";
+import Localizacao from "../components/Localizacao";
+import Faq from "../components/Faq";
 
 export default function Onetoone() {
   return (
@@ -269,6 +272,16 @@ export default function Onetoone() {
           </Card>
         </ul>
       </Secao>
+            <Localizacao id="localizacao" marca="One To One"
+        endereco="Av. Armando Lombardi, 949, Loja I – Barra da Tijuca, Rio de Janeiro"
+        horario="08:00 - 19:00"
+        mapaQuery="Av Armando Lombardi 949 Barra da Tijuca Rio de Janeiro" />
+      <Faq id="faq" itens={[
+        { pergunta: "Preciso ter experiência com musculação?", resposta: "Não. O treino é individual, com atendimento reservado, e é montado a partir da sua avaliação, seja você iniciante ou avançado." },
+        { pergunta: "Como funciona a avaliação inicial?", resposta: <>Ela inclui avaliação 3D de movimento, além das avaliações de fisioterapia e nutrição, que fazem parte de todos os planos. <Link to="/one-to-one/agendamento">Agende sua avaliação</Link>.</> },
+        { pergunta: "Qual plano é ideal para mim?", resposta: <><strong>Express</strong>: treinos de 30 min, até 5x por semana. <strong>One Move</strong>: 60 min, até 3x por semana. <strong>One Power</strong>: 60 min, 6x por semana, com planejamento alimentar. <strong>Be The One</strong>: até 2 treinos por dia e 2 sessões semanais de fisioterapia. Na dúvida, a equipe indica o melhor plano depois da avaliação.</> },
+        { pergunta: "Posso fazer uma aula experimental?", resposta: <>Sim. O studio funciona das 08:00 às 19:00. <Link to="/one-to-one/contato">Fale com a gente</Link> para marcar a sua.</> },
+      ]} />
     </Layout>
   );
 }
