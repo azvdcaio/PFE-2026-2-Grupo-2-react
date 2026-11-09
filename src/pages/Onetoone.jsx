@@ -224,6 +224,51 @@ export default function Onetoone() {
           </Card>
         </Carrossel>
       </Secao>
+            <Secao id="depoimentos" className="secao" aria-labelledby="titulo-opinioes" aria-roledescription="carrossel">
+        <h2 id="titulo-opinioes">
+          {"A opinião de quem confia no nosso trabalho"}
+        </h2>
+        <ul className="opinioes__lista">
+          <Card as="li" className="opiniao-card" aria-label="Depoimento 1" aria-current="true">
+            <Card as="article" aria-label="Primeiro depoimento">
+              <blockquote>
+                <p>
+                  {" O treino em grupo mudou minha relação com o exercício — a energia da turma faz eu render muito mais do que treinando sozinho. "}
+                </p>
+              </blockquote>
+              <footer>
+                <ImagemResponsiva src="/assets/depoimento_one_1.jpg" alt="" sizes="48px" />
+                <p>
+                  <strong>
+                    {"Ana Clara"}
+                  </strong>
+                  <br />
+                  {"Aluno(a) · One To One "}
+                </p>
+              </footer>
+            </Card>
+          </Card>
+          <Card as="li" className="opiniao-card" aria-label="Depoimento 2">
+            <Card as="article" aria-label="Segundo depoimento">
+              <blockquote>
+                <p>
+                  {" Em poucos meses de One To One minha evolução física ficou visível — o acompanhamento técnico faz toda a diferença. "}
+                </p>
+              </blockquote>
+              <footer>
+                <ImagemResponsiva src="/assets/depoimento_one_2.jpg" alt="" sizes="48px" />
+                <p>
+                  <strong>
+                    {"Gabriel da Silva"}
+                  </strong>
+                  <br />
+                  {"Aluno(a) · One To One "}
+                </p>
+              </footer>
+            </Card>
+          </Card>
+        </ul>
+      </Secao>
     </Layout>
   );
 }
