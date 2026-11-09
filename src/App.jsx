@@ -6,7 +6,7 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Hub />} />
-      <Route path="/pkz" element={<Pkz />} />
+      <Route path="/pkz-lab" element={<Pkz />} />
     </Routes>
   );
 }
