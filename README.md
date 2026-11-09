@@ -1,16 +1,48 @@
-# React + Vite
+# Hub PKZ Lab, One To One & Fisioterapia
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site institucional do Hub, que reúne três frentes de atendimento em um só lugar:
 
-Currently, two official plugins are available:
+- **PKZ Lab**: treinamento esportivo para jovens de 7 a 17 anos.
+- **One To One**: studio de treino individual para adultos, com planos, avaliação e acompanhamento.
+- **Fisioterapia**: avaliação, tratamento e reabilitação com atendimento individual.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Projeto desenvolvido pelo Grupo 2 na disciplina Projeto Front-End (IBMEC, 2026.2).
 
-## React Compiler
+## Páginas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Rota | Página |
+| --- | --- |
+| `/` | Hub, com as três frentes e os valores do espaço |
+| `/pkz-lab` | PKZ Lab |
+| `/one-to-one` | One To One, com planos em carrossel, depoimentos e perguntas frequentes |
+| `/fisioterapia` | Fisioterapia, com apresentação, localização e agendamento pelo WhatsApp |
 
-## Expanding the ESLint configuration
+## Tecnologias
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [React](https://react.dev/) 19
+- [Vite](https://vite.dev/)
+- [React Router](https://reactrouter.com/)
+- CSS puro, com layout responsivo (mobile-first)
+
+## Como executar
+
+Requisitos: [Node.js](https://nodejs.org/) (versão LTS).
+
+```bash
+npm install
+npm run dev
+```
+
+O Vite mostra no terminal o endereço local para abrir no navegador.
+
+## Estrutura
+
+```
+src/
+├── App.jsx            rotas da aplicação
+├── pages/             uma página por arquivo
+├── components/        componentes reutilizáveis
+├── config/            marcas, links do menu e dados das imagens
+└── index.css          estilos do site
+public/assets/         imagens e logos
+```
