@@ -1,10 +1,14 @@
-// importar a logo do hub e colocar na img
+import ImagemResponsiva from "./ImagemResponsiva";
 
 export default function Footer() {
   return (
     <footer className="footer">
       <section className="footer__marca" aria-label="Rodapé do site">
-        <img src="" alt="Hub" />
+        <ImagemResponsiva
+          src="/assets/hub_logo.png"
+          alt="Logotipo do Hub"
+          sizes="80px"
+        />
         <p>
           O Hub reúne PKZ Lab e One to One em um só espaço digital: duas
           metodologias, um só compromisso com performance.
