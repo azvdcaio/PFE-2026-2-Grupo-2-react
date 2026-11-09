@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import ImagemResponsiva from "../components/ImagemResponsiva";
 import Secao from "../components/Secao";
 import Card from "../components/Card";
+import Carrossel from "../components/Carrossel";
 
 export default function Onetoone() {
   return (
@@ -51,6 +52,177 @@ export default function Onetoone() {
             </Card>
           </li>
         </ul>
+      </Secao>
+            <Secao id="planos" className="planos-one" aria-labelledby="titulo-planos" aria-roledescription="carrossel">
+        <h2 id="titulo-planos">
+          {"Nossos planos"}
+        </h2>
+        <Carrossel classeSlide="plano-card" rotuloAnterior="Ver plano anterior" rotuloProximo="Ver próximo plano">
+          <Card as="article" aria-labelledby="titulo-plano-1">
+            <ImagemResponsiva className="plano-card__imagem" src="/assets/plano_express.jpg" alt="Aluna com roupa de treino" />
+            <p className="plano-card__badge">
+              {"Plano Express"}
+            </p>
+            <Card as="div" className="plano-card__detalhes">
+              <h3 id="titulo-plano-1">
+                {" Para quem tem pouco tempo mas não abre mão de se cuidar "}
+              </h3>
+              <dl>
+                <div>
+                  <dt>
+                    {"Treinos"}
+                  </dt>
+                  <dd>
+                    {"Treinos de 30 min até 5x por semana"}
+                  </dd>
+                </div>
+                <div>
+                  <dt>
+                    {"Fisio"}
+                  </dt>
+                  <dd>
+                    {"Avaliação inclusa"}
+                  </dd>
+                </div>
+                <div>
+                  <dt>
+                    {"Nutri"}
+                  </dt>
+                  <dd>
+                    {"Avaliação inclusa"}
+                  </dd>
+                </div>
+              </dl>
+              <Card as="a" className="plano-card__cta" to="/one-to-one/contato">
+                {"Entrar em contato"}
+              </Card>
+            </Card>
+          </Card>
+          <Card as="article" aria-labelledby="titulo-plano-2">
+            <ImagemResponsiva className="plano-card__imagem" src="/assets/plano_onemove.jpg" alt="Adulto fazendo flexão" />
+            <p className="plano-card__badge">
+              {"Plano One Move"}
+            </p>
+            <Card as="div" className="plano-card__detalhes">
+              <h3 id="titulo-plano-2">
+                {"Constância é a chave"}
+              </h3>
+              <dl>
+                <div>
+                  <dt>
+                    {"Treinos"}
+                  </dt>
+                  <dd>
+                    {"Treinos de 60 min até 3x por semana"}
+                  </dd>
+                </div>
+                <div>
+                  <dt>
+                    {"Fisio"}
+                  </dt>
+                  <dd>
+                    {"Avaliação inclusa"}
+                  </dd>
+                </div>
+                <div>
+                  <dt>
+                    {"Nutri"}
+                  </dt>
+                  <dd>
+                    {"Avaliação inclusa"}
+                  </dd>
+                </div>
+              </dl>
+              <Card as="a" className="plano-card__cta" to="/one-to-one/contato">
+                {"Entrar em contato"}
+              </Card>
+            </Card>
+          </Card>
+          <Card as="article" aria-labelledby="titulo-plano-3">
+            <ImagemResponsiva className="plano-card__imagem" src="/assets/plano_onepower.jpg" alt="Alunas treinando com personal" />
+            <p className="plano-card__badge">
+              {"Plano One Power"}
+            </p>
+            <Card as="div" className="plano-card__detalhes">
+              <h3 id="titulo-plano-3">
+                {" O ideal para quem busca evolução mais próxima "}
+              </h3>
+              <dl>
+                <div>
+                  <dt>
+                    {"Treinos"}
+                  </dt>
+                  <dd>
+                    {"Treinos de 60 min - 6x por semana"}
+                  </dd>
+                </div>
+                <div>
+                  <dt>
+                    {"Fisio"}
+                  </dt>
+                  <dd>
+                    {"Avaliação inclusa"}
+                  </dd>
+                </div>
+                <div>
+                  <dt>
+                    {"Nutri"}
+                  </dt>
+                  <dd>
+                    {" Avaliação inclusa"}
+                    <br />
+                    {"Planejamento alimentar personalizado "}
+                  </dd>
+                </div>
+              </dl>
+              <Card as="a" className="plano-card__cta" to="/one-to-one/contato">
+                {"Entrar em contato"}
+              </Card>
+            </Card>
+          </Card>
+          <Card as="article" aria-labelledby="titulo-plano-4">
+            <ImagemResponsiva className="plano-card__imagem" src="/assets/plano_betheone.jpg" alt="Alunas treinando" />
+            <p className="plano-card__badge">
+              {"Plano Be The One"}
+            </p>
+            <Card as="div" className="plano-card__detalhes">
+              <h3 id="titulo-plano-4">
+                {"O mais completo do Studio"}
+              </h3>
+              <dl>
+                <div>
+                  <dt>
+                    {"Treinos"}
+                  </dt>
+                  <dd>
+                    {"Treinos de 60 min - até 2 por dia"}
+                  </dd>
+                </div>
+                <div>
+                  <dt>
+                    {"Fisio"}
+                  </dt>
+                  <dd>
+                    {"2 sessões semanais com fisioterapeuta"}
+                  </dd>
+                </div>
+                <div>
+                  <dt>
+                    {"Nutri"}
+                  </dt>
+                  <dd>
+                    {" Avaliação mensal"}
+                    <br />
+                    {"Planejamento alimentar personalizado "}
+                  </dd>
+                </div>
+              </dl>
+              <Card as="a" className="plano-card__cta" to="/one-to-one/contato">
+                {"Entrar em contato"}
+              </Card>
+            </Card>
+          </Card>
+        </Carrossel>
       </Secao>
     </Layout>
   );
