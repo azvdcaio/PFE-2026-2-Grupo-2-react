@@ -7,6 +7,7 @@ import Carrossel from "../components/Carrossel";
 import { Link } from "react-router-dom";
 import Localizacao from "../components/Localizacao";
 import Faq from "../components/Faq";
+import CtaFinal from "../components/CtaFinal";
 
 export default function Onetoone() {
   return (
@@ -282,6 +283,10 @@ export default function Onetoone() {
         { pergunta: "Qual plano é ideal para mim?", resposta: <><strong>Express</strong>: treinos de 30 min, até 5x por semana. <strong>One Move</strong>: 60 min, até 3x por semana. <strong>One Power</strong>: 60 min, 6x por semana, com planejamento alimentar. <strong>Be The One</strong>: até 2 treinos por dia e 2 sessões semanais de fisioterapia. Na dúvida, a equipe indica o melhor plano depois da avaliação.</> },
         { pergunta: "Posso fazer uma aula experimental?", resposta: <>Sim. O studio funciona das 08:00 às 19:00. <Link to="/one-to-one/contato">Fale com a gente</Link> para marcar a sua.</> },
       ]} />
+            <CtaFinal
+        titulo={<>Venha fazer parte da <span>ONE TO ONE</span>.</>}
+        texto="Tire dúvidas, agende uma aula experimental e dê o próximo passo na sua performance."
+        to="/one-to-one/contato" />
     </Layout>
   );
 }
