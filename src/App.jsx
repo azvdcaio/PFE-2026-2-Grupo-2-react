@@ -6,6 +6,7 @@ import Fisioterapia from "./pages/Fisioterapia";
 import ContatoOnetoone from "./pages/ContatoOnetoone";
 import ContatoPKz from "./pages/ContatoPkz";
 import AgendamentoOnetoone from "./pages/AgendamentoOnetoone";
+import AgendamentoPkz from "./pages/AgendamentoPkz";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
       <Route path="/one-to-one/contato" element={<ContatoOnetoone />} />
       <Route path="/pkz-lab/contato" element={<ContatoPKz />} />
       <Route path="/one-to-one/agendamento" element={<AgendamentoOnetoone />} />
+      <Route path="/pkz-lab/agendamento" element={<AgendamentoPkz />} />
     </Routes>
   );
 }
