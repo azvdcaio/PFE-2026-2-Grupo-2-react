@@ -1,6 +1,7 @@
 import ImagemResponsiva from "../components/ImagemResponsiva";
 import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
+import Hero from "../components/Hero";
 import Secao from "../components/Secao";
 import Card from "../components/Card";
 import Acordeon from "../components/Acordeon";
@@ -8,36 +9,32 @@ import Acordeon from "../components/Acordeon";
 export default function Pkz() {
   return (
     <Layout theme="pkz-lab" bodyClass="pkz-corpo" title="PKZ LAB">
-      <Secao className="pkz-hero" aria-labelledby="titulo-hero">
-        <div className="cabecalho">
-          <span className="kicker-2">
-            {"Treinamento de alta performance"}
-          </span>
-          <h1 id="titulo-hero">
-            {" Supere seus limites "}
+      <Hero
+        id="hero"
+        className="pkz-hero"
+        eyebrow="Treinamento de alta performance"
+        titulo={
+          <>
+            Supere seus limites
             <br />
-            {" Alcance seu potencial "}
-          </h1>
-          <p>
-            {" Treine em um ambiente "}
-            <span className="kicker-2">
-              {"exclusivo"}
-            </span>
-            {", com acompanhamento "}
-            <span className="kicker-2">
-              {"especializado"}
-            </span>
-            {" e foco na sua "}
-            <span className="kicker-2">
-              {"evolução"}
-            </span>
-            {" desde cedo "}
-          </p>
-        </div>
-        <Link to="/pkz-lab/agendamento" className="btn btn--ciano">
-          {"Agende sua avaliação"}
-        </Link>
-      </Secao>
+            Alcance seu potencial
+          </>
+        }
+        texto={
+          <>
+            Treine em um ambiente <span className="kicker-2">exclusivo</span>,
+            com acompanhamento <span className="kicker-2">especializado</span> e
+            foco na sua <span className="kicker-2">evolução</span> desde cedo
+          </>
+        }
+        acoes={[
+          {
+            label: "Agende sua avaliação",
+            to: "/pkz-lab/agendamento",
+            variant: "ciano",
+          },
+        ]}
+      />
       <Secao className="pkz-sobre" id="pkz-sobre" aria-labelledby="titulo-sobre">
         <div className="descricao-sobre">
           <div className="cabecalho">

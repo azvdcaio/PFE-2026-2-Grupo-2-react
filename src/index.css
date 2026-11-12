@@ -1047,6 +1047,31 @@ PKZ Lab
   gap: 24px;
   margin-bottom: 40px;
 }
+/* A PKZ agora usa Hero.jsx. Mantém os espaçamentos do banner original,
+   sem interferir no Hero das outras páginas. A imagem continua no CSS
+   com AVIF/WebP/JPEG via image-set(). */
+.pkz-hero .hero__conteudo {
+  gap: 0;
+  padding-inline: 0;
+}
+
+.pkz-hero .hero__eyebrow {
+  margin-bottom: 16px;
+  color: var(--cor-azul-100);
+  font-size: clamp(1rem, 0.85rem + 0.5vw, 1.125rem);
+  font-weight: 600;
+  letter-spacing: normal;
+  opacity: 0.9;
+}
+
+.pkz-hero .hero__conteudo h1 {
+  margin-bottom: 36px;
+}
+
+.pkz-hero .hero__texto {
+  margin-bottom: 24px;
+}
+/**********************/
 
 .descricao-sobre {
   display: flex;
