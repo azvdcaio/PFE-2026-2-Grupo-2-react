@@ -2011,7 +2011,7 @@ One To One
 }
 
 .pagina-one .hero {
-  min-height: 520px;
+  min-height: max(520px, calc(100vh - 64px));
   padding: 48px 24px;
 }
 
@@ -2070,7 +2070,7 @@ One To One
   }
 
   .pagina-one .hero {
-    min-height: 600px;
+    min-height: max(600px, calc(100vh - 64px));
   }
 
   .pagina-one .hero h1 {
@@ -2110,7 +2110,7 @@ One To One
 
 @media (min-width: 1025px) {
   .pagina-one .hero {
-    min-height: 680px;
+    min-height: max(680px, calc(100vh - 64px));
     padding-block: 64px;
   }
 
