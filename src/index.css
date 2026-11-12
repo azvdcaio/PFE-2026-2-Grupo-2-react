@@ -21,7 +21,6 @@
 
 html {
   scroll-padding-top: 5rem;
-  scroll-behavior: smooth;
 }
 
 html,
@@ -567,28 +566,9 @@ button.btn {
   color: var(--cor-cinza-100);
 }
 
-/* ---- Cards de valores: entram na tela ao rolar ---- */
-.valores {
-  overflow-x: clip;
-}
-
-.valores__lista .card-caracteristica {
-  transition:
-    opacity 1.4s ease,
-    transform 1.4s ease;
-}
-
+/* ---- Cards de valores: alternados esquerda/direita ---- */
 .valor--direita {
   margin-left: auto;
-}
-
-.valor--oculto {
-  opacity: 0;
-  transform: translateX(-3rem);
-}
-
-.valor--direita.valor--oculto {
-  transform: translateX(3rem);
 }
 
 .empresas {
@@ -787,14 +767,6 @@ button.btn {
 
   .valores__lista article {
     width: 80%;
-  }
-
-  .valor--oculto {
-    transform: translateX(-6rem);
-  }
-
-  .valor--direita.valor--oculto {
-    transform: translateX(6rem);
   }
 
   .empresas {

@@ -2,7 +2,7 @@ import Card from "./Card";
 import Secao from "./Secao";
 
 /**
- * Lista de cards com ícone que entram alternando esquerda/direita ao rolar (Hub e Fisioterapia).
+ * Lista de cards com ícone alternados à esquerda/direita (Hub e Fisioterapia).
  * itens: [{ titulo, texto, icone: "classe do Font Awesome" }]
  */
 export default function Valores({ id = "valores", kicker, titulo, texto, itens }) {

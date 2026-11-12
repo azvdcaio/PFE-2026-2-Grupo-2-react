@@ -750,20 +750,10 @@ export function iniciarInteracoes() {
   document.addEventListener("pointerdown", pressionar, {signal: abort.signal});
   document.addEventListener("click", clicar, {signal: abort.signal});
 
-  const listaValores = document.querySelectorAll(".valores__lista .card-caracteristica");
-  const observer = typeof IntersectionObserver !== "undefined" ? new IntersectionObserver((entries) => {
-    for (const entry of entries) if (entry.isIntersecting) {
-      entry.target.classList.remove("valor--oculto");
-      observer.unobserve(entry.target);
-    }
-  }, {threshold: 0.2}) : null;
-  listaValores.forEach((element) => { if (observer) { element.classList.add("valor--oculto"); observer.observe(element); } });
-
   iniciarCalendario();
   iniciarContato();
 
   return () => {
     abort.abort();
-    observer?.disconnect();
   };
 }
