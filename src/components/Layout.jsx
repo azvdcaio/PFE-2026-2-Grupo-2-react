@@ -1,13 +1,16 @@
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
+import { iniciarInteracoes } from "../interactions/interacoes";
 
 export default function Layout({ theme, bodyClass = "", title, children }) {
-  // Aplica a classe de tema no body e o título da aba
+  const { pathname } = useLocation();
   useEffect(() => {
     document.body.className = bodyClass;
     document.title = title || "Hub | PKZ Lab e One To One";
-  }, [bodyClass, title]);
+    return iniciarInteracoes();
+  }, [bodyClass, title, pathname]);
 
   return (
     <div className={`site-layout ${bodyClass}`} data-theme={theme}>
