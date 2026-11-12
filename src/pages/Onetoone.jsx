@@ -15,6 +15,8 @@ export default function Onetoone() {
       <Hero id="hero"
         imagem="/assets/onetoone_hero_banner.jpg"
         imagemAlt="Instrutor acompanhando aluna durante treino personalizado com halteres"
+        // Banner 2400×1000 em "cover": no celular a altura do hero manda na largura necessária.
+        imagemSizes="max(100vw, 240vh)"
         wordmark
         eyebrow="Treinamento de alta performance"
         titulo={<>Supere seus limites.<br />Alcance seu potencial</>}
@@ -33,7 +35,7 @@ export default function Onetoone() {
         <ul className="equipe__lista">
           <li>
             <Card as="article" className="membro">
-              <ImagemResponsiva src="/assets/caracteristica_treino.jpg" alt="Aluna fazendo levantamento terra com o personal trainer acompanhando" />
+              <ImagemResponsiva src="/assets/caracteristica_treino.jpg" sizes="(max-width: 767px) 100vw, 360px" alt="Aluna fazendo levantamento terra com o personal trainer acompanhando" />
               <h3>
                 {"Treino personalizado de verdade"}
               </h3>
@@ -41,7 +43,7 @@ export default function Onetoone() {
           </li>
           <li>
             <Card as="article" className="membro">
-              <ImagemResponsiva src="/assets/caracteristica_fisio.jpg" alt="Fisioterapeuta avaliando o joelho de um paciente deitado na maca" />
+              <ImagemResponsiva src="/assets/caracteristica_fisio.jpg" sizes="(max-width: 767px) 100vw, 360px" alt="Fisioterapeuta ajustando uma órtese no tornozelo de uma paciente" />
               <h3>
                 {"Fisioterapia com tecnologia de ponta"}
               </h3>
@@ -49,7 +51,7 @@ export default function Onetoone() {
           </li>
           <li>
             <Card as="article" className="membro">
-              <ImagemResponsiva src="/assets/caracteristica_nutri.jpg" alt="Bowl de salada com legumes, grão-de-bico e abacate" />
+              <ImagemResponsiva src="/assets/caracteristica_nutri.jpg" sizes="(max-width: 767px) 100vw, 360px" alt="Bowl de salada com legumes, grão-de-bico e abacate" />
               <h3>
                 {"Nutrição prática e eficiente"}
               </h3>
@@ -63,7 +65,7 @@ export default function Onetoone() {
         </h2>
         <Carrossel classeSlide="plano-card" rotuloAnterior="Ver plano anterior" rotuloProximo="Ver próximo plano">
           <Card as="article" aria-labelledby="titulo-plano-1">
-            <ImagemResponsiva className="plano-card__imagem" src="/assets/plano_express.jpg" alt="Aluna com roupa de treino" />
+            <ImagemResponsiva className="plano-card__imagem" src="/assets/plano_express.jpg" sizes="(max-width: 767px) 100vw, 550px" alt="Aluna com roupa de treino" />
             <p className="plano-card__badge">
               {"Plano Express"}
             </p>
@@ -103,7 +105,7 @@ export default function Onetoone() {
             </Card>
           </Card>
           <Card as="article" aria-labelledby="titulo-plano-2">
-            <ImagemResponsiva className="plano-card__imagem" src="/assets/plano_onemove.jpg" alt="Adulto fazendo flexão" />
+            <ImagemResponsiva className="plano-card__imagem" src="/assets/plano_onemove.jpg" sizes="(max-width: 767px) 100vw, 550px" alt="Adulto fazendo flexão" />
             <p className="plano-card__badge">
               {"Plano One Move"}
             </p>
@@ -143,7 +145,7 @@ export default function Onetoone() {
             </Card>
           </Card>
           <Card as="article" aria-labelledby="titulo-plano-3">
-            <ImagemResponsiva className="plano-card__imagem" src="/assets/plano_onepower.jpg" alt="Alunas treinando com personal" />
+            <ImagemResponsiva className="plano-card__imagem" src="/assets/plano_onepower.jpg" sizes="(max-width: 767px) 100vw, 550px" alt="Alunas treinando com personal" />
             <p className="plano-card__badge">
               {"Plano One Power"}
             </p>
@@ -185,7 +187,7 @@ export default function Onetoone() {
             </Card>
           </Card>
           <Card as="article" aria-labelledby="titulo-plano-4">
-            <ImagemResponsiva className="plano-card__imagem" src="/assets/plano_betheone.jpg" alt="Alunas treinando" />
+            <ImagemResponsiva className="plano-card__imagem" src="/assets/plano_betheone.jpg" sizes="(max-width: 767px) 100vw, 550px" alt="Alunas treinando" />
             <p className="plano-card__badge">
               {"Plano Be The One"}
             </p>

@@ -19,7 +19,7 @@ export default function Fisioterapia() {
       <Hero
         id="hero"
         imagem="/assets/caracteristica_fisio.jpg"
-        imagemAlt="Fisioterapeuta avaliando o joelho de um paciente deitado na maca"
+        imagemAlt="Fisioterapeuta ajustando uma órtese no tornozelo de uma paciente"
         eyebrow="Fisioterapia"
         titulo={
           <>

@@ -2,10 +2,10 @@ import ImagemResponsiva from "./ImagemResponsiva";
 import Button from "./Button";
 
 /** Hero reaproveitado no Hub e One To One, com os estilos originais. */
-export default function Hero({ id = "hero", imagem, imagemAlt = "", video, poster, wordmark = false, eyebrow, titulo, texto, acoes = [] }) {
+export default function Hero({ id = "hero", imagem, imagemAlt = "", imagemSizes = "100vw", video, poster, wordmark = false, eyebrow, titulo, texto, acoes = [] }) {
   return (
     <section id={id} className="hero" aria-labelledby="titulo-hero">
-      {imagem && <ImagemResponsiva className="hero__imagem" src={imagem} alt={imagemAlt} sizes="100vw" loading="eager" fetchPriority="high" />}
+      {imagem && <ImagemResponsiva className="hero__imagem" src={imagem} alt={imagemAlt} sizes={imagemSizes} loading="eager" fetchPriority="high" />}
       {video && <video className="hero__video" src={video} poster={poster} autoPlay muted loop playsInline preload="auto" aria-hidden="true" tabIndex={-1} />}
       {wordmark && <p className="hero__wordmark" aria-hidden="true" />}
       <div className="hero__conteudo">

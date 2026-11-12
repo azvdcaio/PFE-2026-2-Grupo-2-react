@@ -12,6 +12,7 @@ export default function Hub() {
       <Hero
         id="hero"
         video="/assets/hub_video.mp4"
+        poster="/assets/hub_video_poster.jpg"
         titulo="CT de Performance Integrado"
         texto={
           <>
@@ -85,7 +86,7 @@ export default function Hub() {
         <EmpresaCard
           chave="pkz"
           id="titulo-pkz"
-          imagem="/assets/pkz_empresa.png"
+          imagem="/assets/pkz_empresa.jpg"
           imagemAlt="Jovem atleta em treino de alta performance na PKZ LAB"
           marca="PKZ LAB"
           titulo="Desenvolvimento esportivo desde cedo."
@@ -98,7 +99,7 @@ export default function Hub() {
         <EmpresaCard
           chave="one"
           id="titulo-one"
-          imagem="/assets/onetoone_empresa.png"
+          imagem="/assets/onetoone_empresa.jpg"
           imagemAlt="Treinador acompanhando aluna em atendimento personalizado na One To One"
           marca="One To One"
           titulo="Treinamento pensado para você."
@@ -127,7 +128,7 @@ export default function Hub() {
           chave="fisio"
           id="titulo-fisio"
           imagem="/assets/caracteristica_fisio.jpg"
-          imagemAlt="Fisioterapeuta avaliando o joelho de um paciente deitado na maca"
+          imagemAlt="Fisioterapeuta ajustando uma órtese no tornozelo de uma paciente"
           marca="Fisioterapia"
           titulo="Cuidado que acompanha o seu movimento."
           descricao="Atendimento individual com avaliação funcional, plano de tratamento e acompanhamento da evolução, integrado ao treino quando fizer sentido para o seu objetivo."
@@ -153,6 +154,7 @@ export default function Hub() {
               <figure>
                 <ImagemResponsiva
                   src="/assets/pessoa2.jpg"
+                  sizes="(max-width: 767px) 100vw, 360px"
                   alt="Retrato de integrante da equipe da PKZ Lab"
                 />
               </figure>
@@ -165,6 +167,7 @@ export default function Hub() {
               <figure>
                 <ImagemResponsiva
                   src="/assets/pessoa3.jpg"
+                  sizes="(max-width: 767px) 100vw, 360px"
                   alt="Retrato de integrante da direção do Hub"
                 />
               </figure>
@@ -177,6 +180,7 @@ export default function Hub() {
               <figure>
                 <ImagemResponsiva
                   src="/assets/pessoa1.jpg"
+                  sizes="(max-width: 767px) 100vw, 360px"
                   alt="Retrato de integrante da equipe da One To One"
                 />
               </figure>

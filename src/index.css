@@ -1000,6 +1000,20 @@ PKZ Lab
   margin-bottom: 40px;
 }
 
+/* Telas retina recebem a versão de 2400px. No celular o "cover" amplia o
+   banner pela altura do hero, então ele também precisa da resolução maior. */
+@media (min-resolution: 2dppx) {
+  .pkz-hero {
+    background-image:
+      linear-gradient(rgba(0, 17, 43, 0.7), rgba(0, 17, 43, 0.7)),
+      image-set(
+        url('/assets/pkz_hero_banner-2400.avif') type('image/avif'),
+        url('/assets/pkz_hero_banner-2400.webp') type('image/webp'),
+        url('/assets/pkz_hero_banner.jpg') type('image/jpeg')
+      );
+  }
+}
+
 .pkz-hero h1 {
   font-weight: 800;
   text-transform: uppercase;

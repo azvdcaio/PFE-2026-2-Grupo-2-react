@@ -1,11 +1,12 @@
 /** Formatos e resoluções que existem em public/assets */
 export const formatosImagens = {
   "/assets/caracteristica_fisio.jpg": {
-    "largura": 900,
-    "altura": 600,
+    "largura": 1350,
+    "altura": 900,
     "larguras": [
       480,
-      900
+      900,
+      1350
     ]
   },
   "/assets/caracteristica_nutri.jpg": {
@@ -66,7 +67,7 @@ export const formatosImagens = {
       107
     ]
   },
-  "/assets/onetoone_empresa.png": {
+  "/assets/onetoone_empresa.jpg": {
     "largura": 460,
     "altura": 566,
     "larguras": [
@@ -79,7 +80,8 @@ export const formatosImagens = {
     "larguras": [
       480,
       960,
-      1920
+      1920,
+      2400
     ]
   },
   "/assets/onetoone_logo.png": {
@@ -92,60 +94,42 @@ export const formatosImagens = {
     ]
   },
   "/assets/pessoa1.jpg": {
-    "largura": 3738,
-    "altura": 4267,
+    "largura": 1440,
+    "altura": 1644,
     "larguras": [
       480,
       960,
-      1920
+      1440
     ]
   },
   "/assets/pessoa2.jpg": {
-    "largura": 3744,
-    "altura": 5616,
+    "largura": 1440,
+    "altura": 2160,
     "larguras": [
       480,
       960,
-      1920
+      1440
     ]
   },
   "/assets/pessoa3.jpg": {
-    "largura": 1828,
-    "altura": 2743,
+    "largura": 1440,
+    "altura": 2161,
     "larguras": [
       480,
       960,
-      1828
+      1440
     ]
   },
   "/assets/pkz-sobre-img.jpeg": {
-    "largura": 2752,
-    "altura": 1536,
+    "largura": 1920,
+    "altura": 1072,
     "larguras": [
       480,
       960,
       1920
     ]
   },
-  "/assets/pkz-usuario-planos-img.jpeg": {
-    "largura": 2400,
-    "altura": 1792,
-    "larguras": [
-      480,
-      960,
-      1920
-    ]
-  },
-  "/assets/pkz-usuario2-plano-img.jpeg": {
-    "largura": 2400,
-    "altura": 1792,
-    "larguras": [
-      480,
-      960,
-      1920
-    ]
-  },
-  "/assets/pkz_empresa.png": {
+  "/assets/pkz_empresa.jpg": {
     "largura": 460,
     "altura": 566,
     "larguras": [
@@ -158,7 +142,8 @@ export const formatosImagens = {
     "larguras": [
       480,
       960,
-      1920
+      1920,
+      2400
     ]
   },
   "/assets/pkz_logo.png": {
