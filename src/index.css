@@ -479,7 +479,7 @@ button.btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 520px;
+  min-height: max(520px, calc(100vh - 64px));
   padding: 48px 16px;
   background: var(--cor-azul-900);
   color: var(--cor-cinza-100);
@@ -773,7 +773,7 @@ button.btn {
   }
 
   .hero {
-    min-height: 600px;
+    min-height: max(600px, calc(100vh - 64px));
   }
 
   .hero__conteudo {
@@ -821,7 +821,7 @@ button.btn {
 /* 1025px — 1200px: laptops, desktops e telas grandes */
 @media (min-width: 1025px) {
   .hero {
-    min-height: 680px;
+    min-height: max(680px, calc(100vh - 64px));
     padding: 64px 24px;
   }
 
@@ -833,7 +833,7 @@ button.btn {
 /* 1201px em diante: telas muito grandes e TVs */
 @media (min-width: 1201px) {
   .hero {
-    min-height: 760px;
+    min-height: max(760px, calc(100vh - 64px));
   }
 }
 
