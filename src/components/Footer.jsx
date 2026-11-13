@@ -1,6 +1,15 @@
 import ImagemResponsiva from "./ImagemResponsiva";
+import { empresas } from "../config/siteConfig";
 
-export default function Footer() {
+export default function Footer({ theme }) {
+  // O mesmo Footer atende todas as páginas, mas cada marca tem seu Instagram.
+  const marca = theme === "pkz-lab" ? "PKZ Lab" : theme === "one-to-one" ? "One to One" : null;
+  const instagram = theme === "pkz-lab"
+    ? empresas.pkz.instagram
+    : theme === "one-to-one"
+      ? empresas["one-to-one"].instagram
+      : "https://instagram.com/";
+
   return (
     <footer className="footer">
       <section className="footer__marca" aria-label="Rodapé do site">
@@ -20,11 +29,11 @@ export default function Footer() {
         <ul>
           <li>
             <a
-              href="https://instagram.com/"
+              href={instagram}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-rede"
-              aria-label="Instagram"
+              aria-label={marca ? `Instagram da ${marca}` : "Instagram"}
             >
               <i className="fa-brands fa-instagram" aria-hidden="true"></i>
             </a>

@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import Secao from "../components/Secao";
+import { empresas } from "../config/siteConfig";
 
 export default function Contato({ empresa = "pkz" }) {
   const pkz = empresa === "pkz";
+  const { telefone, telefoneLink, instagram, tiktok } = empresas[empresa];
   const marca = pkz ? "PKZ Lab" : "One To One";
   return (
     <Layout theme={pkz ? "pkz-lab" : "one-to-one"} bodyClass={pkz ? "pagina-pkz" : "pagina-one"} title={`Contato | ${marca}`}>
@@ -30,7 +32,7 @@ export default function Contato({ empresa = "pkz" }) {
                   <i className="fa-solid fa-phone" aria-hidden="true">
                   </i>
                 </span>
-                {" +55 (21) 99999-9999 "}
+                <a href={telefoneLink}>{telefone}</a>
               </li>
               <li>
                 <span className="passos__numero">
@@ -52,13 +54,13 @@ export default function Contato({ empresa = "pkz" }) {
           </address>
           <ul className={pkz ? "contatos_redes_pkz" : "contato__redes"} aria-label={`Redes sociais da ${marca}`}>
             <li>
-              <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" className="btn-rede" aria-label={`TikTok da ${marca}`}>
+              <a href={tiktok ?? "https://www.tiktok.com/"} target="_blank" rel="noopener noreferrer" className="btn-rede" aria-label={`TikTok da ${marca}`}>
                 <i className="fa-brands fa-tiktok" aria-hidden="true">
                 </i>
               </a>
             </li>
             <li>
-              <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="btn-rede" aria-label={`Instagram da ${marca}`}>
+              <a href={instagram} target="_blank" rel="noopener noreferrer" className="btn-rede" aria-label={`Instagram da ${marca}`}>
                 <i className="fa-brands fa-instagram" aria-hidden="true">
                 </i>
               </a>

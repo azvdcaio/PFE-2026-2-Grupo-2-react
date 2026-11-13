@@ -16,7 +16,7 @@ export default function Layout({ theme, bodyClass = "", title, children }) {
     <div className={`site-layout ${bodyClass}`} data-theme={theme}>
       <Header theme={theme} />
       <main>{children}</main>
-      <Footer />
+      <Footer theme={theme} />
     </div>
   );
 }
